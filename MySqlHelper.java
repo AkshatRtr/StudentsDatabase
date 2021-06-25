@@ -48,13 +48,13 @@ public class MySqlHelper {
         prepStmt.execute();
         //con.close();
     }
-    /*public Student findStudentById(String stuId) throws SQLException {
+    public Student findStudentById(String stuId) throws SQLException {
         String findStudentQuery = "select * from StudentData where stu_id ='?';";
         PreparedStatement preparedStatement = con.prepareStatement(findStudentQuery);
         preparedStatement.setString(1,"%"+stuId+"%");
         preparedStatement.execute();
-        return ;*/
-
+        return ;
+    }
     public void performDatabaseOperationWithStudent(Student student, String operation) throws SQLException {
         if (operation.equals("ADD")){
             insertStudentInDatabase(student);
